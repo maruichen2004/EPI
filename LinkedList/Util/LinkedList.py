@@ -6,10 +6,10 @@ class ListNode:
       self.next = None
 
 class LinkedList:
-   def __init__(self, num, sorted=False):
+   def __init__(self, num, l=1, r=100, sorted=False):
       if num <= 0: self.head = None
       else:
-         vals = [randint(1, 100) for i in range(num)]
+         vals = [randint(l, r) for i in range(num)]
          if sorted == True: vals.sort()
          nodes = [ListNode(vals[i]) for i in range(num)]
          for i in range(num - 1): nodes[i].next = nodes[i+1]
@@ -32,3 +32,36 @@ class LinkedList:
       cur = head
       while cur.next: cur = cur.next
       cur.next = head
+
+class RandomListNode:
+   def __init__(self, value):
+      self.val = value
+      self.next = None
+      self.random = None
+
+class RandomLinkedList:
+   def __init__(self, num, l=1, r=100, sorted=False):
+      if num <= 0: self.head = None
+      else:
+         vals = [randint(l, r) for i in range(num)]
+         if sorted == True: vals.sort()
+         nodes = [RandomListNode(vals[i]) for i in range(num)]
+         for i in range(num - 1): nodes[i].next = nodes[i+1]
+         self.head = nodes[0]
+
+   def display(self):
+      cur = self.head
+      while cur:
+         print cur.val,
+         if cur.random: print "(" + str(cur.random.val) + ")", 
+         cur = cur.next
+      print "\n"
+
+   def getHead(self):
+      return self.head
+
+   def connect(self, n1, n2):
+      front, end = self.head, self.head
+      for i in range(n1): front = front.next
+      for i in range(n2): end = end.next
+      front.random = end
