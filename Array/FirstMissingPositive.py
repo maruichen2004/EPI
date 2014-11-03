@@ -1,6 +1,6 @@
 class Solution:
-   # Time:
-   # Space:
+   # Time: O(n)
+   # Space: O(1)
    def firstMissingPositive(self, A):
       i = 0
       while i < len(A):
