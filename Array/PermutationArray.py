@@ -1,6 +1,6 @@
 class Solution:
-   # Time:
-   # Space:
+   # Time: O(n)
+   # Space: O(1)
    def applyPermutation(self, A, perm):
       for i in range(len(perm)):
          if perm[i] >= 0:
