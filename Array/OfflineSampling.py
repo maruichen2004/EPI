@@ -4,7 +4,7 @@ class Solution:
    # Space: O(1)
    def offlineSampling(self, A, k):
       for i in reversed(range(len(A) - 1 - k, len(A))):
-         r = randint(0, len(A) - 1 - i)
+         r = randint(0, i)
          A[r], A[i] = A[i], A[r]
       return A[:k:-1]
 

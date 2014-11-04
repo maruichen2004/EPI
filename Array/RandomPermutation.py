@@ -4,7 +4,7 @@ class Solution:
    # Space: O(1)
    def randomPermutation(self, A):
       for i in reversed(range(len(A))):
-         r = randint(0, len(A) - 1 - i)
+         r = randint(0, i)
          A[r], A[i] = A[i], A[r]
 
 if __name__ == "__main__":
