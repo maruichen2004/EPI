@@ -2,8 +2,8 @@ from Util.BinaryTree import TreeNode
 from Util.BinaryTree import BinaryTree
 
 class Solution:
-   # Time:
-   # Space:
+   # Time: O(n)
+   # Space: O(h)
    def sumRootToLeafNumber(self, root):
       return self.sumRootToLeafNumberHelper(root, 0)
 
