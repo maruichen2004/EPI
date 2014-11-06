@@ -4,6 +4,7 @@ class TreeNode:
       self.left = None
       self.right = None
       self.parent = None
+      self.next = None
       self.size = 0
 
 class BinaryTree:
