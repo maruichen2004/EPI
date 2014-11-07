@@ -1,6 +1,6 @@
 class Solution:
-   # Time:
-   # Space:
+   # Time: O(k)
+   # Space: O(k)
    def compareKLargest(self, A, k, x):
       data = [0, 0]
       self.compareKLargestHelper(A, k, x, 0, data)
