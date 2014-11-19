@@ -8,8 +8,8 @@ class TreeNode:
       self.size = 0
 
 class BinaryTree:
-   def __init__(self):
-      node = [TreeNode(i) for i in range(1, 11)]
+   def __init__(self, offset = 0):
+      node = [TreeNode(i + offset) for i in range(1, 11)]
       node[5].left = node[3]
       node[5].right = node[7]
       node[3].left = node[1]
